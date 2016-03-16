@@ -1,0 +1,10 @@
+<% @articles.each do |article| %>
+  <h1 class="article-title">
+    <%= link_to "/articles/#{article.id}" do %>
+      <%= article.title %>
+    <% end %>
+  </h1>
+  <p class="article-body"><%= article.body %></p>
+<% end %>
+
+<%= link_to "Administrate this blog :)", "/admin", class:"button" %>
